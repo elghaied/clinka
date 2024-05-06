@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="JpbDataSourceConfig">
+    <data-source-infos>
+      <data-source-info id="1012f2be-fba1-441e-9af7-03035d72ed7a" persistence-unit-name="Default" />
+      <data-source-info id="1012f2be-fba1-441e-9af7-03035d72ed7a" persistence-unit-name="clinikaUnit" />
+      <data-source-info id="1012f2be-fba1-441e-9af7-03035d72ed7a" persistence-unit-name="ClinikaUnit" />
+      <data-source-info id="1012f2be-fba1-441e-9af7-03035d72ed7a" persistence-unit-name="UnitClink" />
+    </data-source-infos>
+  </component>
+</project>
