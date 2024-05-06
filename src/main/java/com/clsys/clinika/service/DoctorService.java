@@ -3,6 +3,8 @@ package com.clsys.clinika.service;
 import com.clsys.clinika.dao.DoctorDAO;
 import com.clsys.clinika.model.Doctor;
 import jakarta.enterprise.context.ApplicationScoped;
+import jakarta.enterprise.context.RequestScoped;
+import jakarta.enterprise.inject.Model;
 import jakarta.inject.Inject;
 
 
@@ -10,7 +12,8 @@ import jakarta.inject.Singleton;
 import jakarta.transaction.Transactional;
 import java.util.List;
 
-@ApplicationScoped
+@SuppressWarnings("cdi.unsatisfieddependency")
+@RequestScoped
 public class DoctorService {
 
     private final DoctorDAO doctorDAO;

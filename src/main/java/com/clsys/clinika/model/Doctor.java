@@ -1,11 +1,10 @@
 package com.clsys.clinika.model;
 
-import jakarta.persistence.Column;
+
 import jakarta.persistence.Entity;
 
 @Entity
 public class Doctor extends Person {
-    @Column(name = "specialization")
     private String specialization;
 
     // Constructors

@@ -3,30 +3,23 @@ package com.clsys.clinika.model;
 import jakarta.persistence.*;
 
 @Entity
-@Table(name = "prescription")
 public class Prescription {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
     @ManyToOne
-    @JoinColumn(name = "patient_id", nullable = false)
     private Patient patient;
 
     @ManyToOne
-    @JoinColumn(name = "doctor_id", nullable = false)
     private Doctor doctor;
 
-    @Column(name = "medication", nullable = false, length = 255)
     private String medication;
 
-    @Column(name = "dosage", nullable = false, length = 255)
     private String dosage;
 
-    @Column(name = "instructions", nullable = false, length = 255)
     private String instructions;
 
-    @Column(name = "duration", nullable = false)
     private int duration;
 
     // Constructors

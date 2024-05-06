@@ -6,7 +6,7 @@ import jakarta.enterprise.context.ApplicationScoped;
 import jakarta.inject.Inject;
 import jakarta.transaction.Transactional;
 import java.util.List;
-
+@SuppressWarnings("cdi.unsatisfieddependency")
 @ApplicationScoped
 public class BillingService {
 

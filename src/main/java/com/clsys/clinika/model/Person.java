@@ -3,20 +3,15 @@ package com.clsys.clinika.model;
 import jakarta.persistence.*;
 
 @Entity
-@Table(name = "person") // Specify the table name in lowercase
 public class Person {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "id") // Specify the column name in lowercase
     private Long id;
 
-    @Column(name = "name", nullable = false) // Specify the column name in lowercase and make it not nullable
     private String name;
 
-    @Column(name = "contactInformation") // Specify the column name in lowercase
     private String contactInformation;
 
-    @Column(name = "address") // Specify the column name in lowercase
     private String address;
 
     // Constructors

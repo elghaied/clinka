@@ -5,22 +5,18 @@ import jakarta.persistence.*;
 import java.time.LocalDateTime;
 
 @Entity
-@Table(name = "appointment") // Specify the table name
 public class Appointment {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @Column(name = "dateTime", nullable = false) // Specify the column name and make it not nullable
     private LocalDateTime dateTime;
 
     @ManyToOne
-    @JoinColumn(name = "patient_id", nullable = false) // Specify the column name for the patient reference and make it not nullable
     private Patient patient;
 
     @ManyToOne
-    @JoinColumn(name = "doctor_id", nullable = false) // Specify the column name for the doctor reference and make it not nullable
     private Doctor doctor;
 
     // Constructors

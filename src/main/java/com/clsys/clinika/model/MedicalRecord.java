@@ -3,7 +3,6 @@ package com.clsys.clinika.model;
 import jakarta.persistence.*;
 
 @Entity
-@Table(name = "medicalrecord") // Specify the table name
 public class MedicalRecord {
 
     @Id
@@ -11,13 +10,10 @@ public class MedicalRecord {
     private Long id;
 
     @ManyToOne
-    @JoinColumn(name = "patient_id", nullable = false) // Specify the column name for the patient reference and make it not nullable
     private Patient patient;
 
-    @Column(name = "diagnoses") // Specify the column name for diagnoses
     private String diagnoses;
 
-    @Column(name = "treatments") // Specify the column name for treatments
     private String treatments;
     // Constructors
     public MedicalRecord() {

@@ -5,24 +5,20 @@ import jakarta.persistence.*;
 import java.math.BigDecimal;
 
 @Entity
-@Table(name = "billing") // Specify the table name
 public class Billing {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
     @ManyToOne
-    @JoinColumn(name = "patient_id", nullable = false) // Specify the column name for the patient reference and make it not nullable
     private Patient patient;
 
     @ManyToOne
-    @JoinColumn(name = "appointment_id", nullable = false) // Specify the column name for the appointment reference and make it not nullable
     private Appointment appointment;
 
-    @Column(nullable = false) // Make the amount column not nullable
+// Make the amount column not nullable
     private BigDecimal amount;
 
-    @Column(name = "paymentStatus", nullable = false) // Specify the column name for the payment status and make it not nullable
     private boolean paymentStatus;
 
     // Constructors

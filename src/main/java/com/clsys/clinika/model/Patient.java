@@ -1,14 +1,12 @@
 package com.clsys.clinika.model;
 
-import jakarta.persistence.Column;
+
 import jakarta.persistence.Entity;
 
 @Entity
 public class Patient extends Person {
-    @Column(name = "medicalHistory") // Specify the column name for medical history
     private String medicalHistory;
 
-    @Column(name = "currentHealthStatus") // Specify the column name for current health status
     private String currentHealthStatus;
 
 
